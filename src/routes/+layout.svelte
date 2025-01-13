@@ -2,7 +2,7 @@
   import "../app.postcss"
 
   import {base} from "$app/paths";
-
+console.log("base", base)
   import { computePosition, autoUpdate, offset, shift, flip, arrow } from '@floating-ui/dom';
 
 import { storePopup } from '@skeletonlabs/skeleton';

@@ -25,7 +25,6 @@ const config = {
 			assets: 'docs',
 			fallback: '202.html'
 		}),
-		paths: { relative: false }
 	},
 	vitePlugin: {
 		experimental: {
