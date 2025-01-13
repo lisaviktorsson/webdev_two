@@ -33,6 +33,9 @@
   <a href="{base}/search/{search}">{search}</a>
 
 
+  <button on:click={() => goto("/search/"+search)}>Search</button>
+
+
 <style>
 
 
