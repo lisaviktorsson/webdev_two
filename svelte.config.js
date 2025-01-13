@@ -23,7 +23,7 @@ const config = {
 		adapter: adapter({
 			pages: 'docs',
 			assets: 'docs',
-			fallback: '202.html'
+			fallback: 'index.html' 
 		}),
 	},
 	vitePlugin: {
