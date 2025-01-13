@@ -29,7 +29,7 @@
 
 
   <input type="text" placeholder="Sök upp en pokemon" bind:value={search} />
-  <a href="{base}/search/{search}"><button  type="submit">Search</button></a>
+  <a href="{base}/search/{search}">{search}</a>
 
 
 <style>
