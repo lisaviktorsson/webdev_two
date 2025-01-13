@@ -1,0 +1,1 @@
+import"../chunks/disclose-version.Bg9kRutz.js";import"../chunks/legacy.kkaBD5aU.js";import{a as e,t as a}from"../chunks/template.CvXheLdW.js";var t=a('<body class="svelte-1skswzg"><div id="ball" class="colored svelte-1skswzg"></div> <div id="cube" class="colourd svelte-1skswzg"></div></body>');function r(s){var o=t();e(s,o)}export{r as component};

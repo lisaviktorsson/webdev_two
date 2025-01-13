@@ -1,11 +1,10 @@
 import adapter from '@sveltejs/adapter-static';
-import preprocess from 'svelte-preprocess';
+import { vitePreprocess } from '@sveltejs/vite-plugin-svelte';
 import { mdsvex } from 'mdsvex'
 import remarkGithub from 'remark-github';
 import remarkAbbr from 'remark-abbr';
 import rehypeSlug from 'rehype-slug';
 import rehypeAutolinkHeadings from 'rehype-autolink-headings';
-import { vitePreprocess } from '@sveltejs/kit/vite';
 
 
 
@@ -14,7 +13,7 @@ const config = {
 
 	// Consult https://github.com/sveltejs/svelte-preprocess
 	// for more information about preprocessors
-	preprocess: [preprocess(), vitePreprocess(), mdsvex({
+	preprocess: [vitePreprocess(), mdsvex({
 		extensions: ['.md', '.svx'],
 		layout: { blog: './src/routes/blog/post.svelte' },
 	})],

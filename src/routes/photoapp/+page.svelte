@@ -19,7 +19,7 @@ let images = [{img:image, votes:0}, {img:photo, votes:0}, {img:picture, votes:0}
 
 <div class="photos">
     {#each images as {img, votes}}
-        <div class="image-wrapper" on:click={()=>{votes++}} >
+        <div class="image-wrapper" on:click={()=>{votes= votes+1}} >
             <img src={img} alt="">
             <p>Votes: {votes}</p>
         </div>
