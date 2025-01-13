@@ -1,6 +1,8 @@
 <script>
   import "../app.postcss"
 
+  import {base} from "$app/paths";
+
   import { computePosition, autoUpdate, offset, shift, flip, arrow } from '@floating-ui/dom';
 
 import { storePopup } from '@skeletonlabs/skeleton';
@@ -76,11 +78,11 @@ storePopup.set({ computePosition, autoUpdate, offset, shift, flip, arrow });
 <nav style="background-color:{user ? user.color :"grey"};">
   <a  class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium" href="/">Hem</a>
   <a on:click={event => handleNavigation(event, '/telltale')} class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium" href="/telltale">Telltale</a>
-  <a class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium" href="/memory">Memory</a>
-  <a class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium" href="/chat">Chat</a>
-  <a class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium" href="/search">Search</a>
-  <a class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium" href="/blog">Blog</a>
-  <a class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium" href="/photoapp">Photo App</a>
+  <a class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium" href="{base}/memory">Memory</a>
+  <a class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium" href="{base}/chat">Chat</a>
+  <a class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium" href="{base}/search">Search</a>
+  <a class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium" href="{base}/blog">Blog</a>
+  <a class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium" href="{base}/photoapp">Photo App</a>
 
   
 </nav>
