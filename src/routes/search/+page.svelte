@@ -12,7 +12,8 @@
       pokemons = JSON.parse($pokemons_store);
   });
 
-</script>
+
+  import { base } from '$app/paths';</script>
 
 
 
@@ -23,7 +24,7 @@
     {/each}
 </footer>
 
-<form on:submit|preventDefault={()=> goto('/search/'+search)}>
+<form on:submit|preventDefault={()=> goto({base}+'/search/'+search)}>
   <input type="text" placeholder="Sök upp en pokemon" bind:value={search} />
   <button type="submit">Search</button>
 </form>
