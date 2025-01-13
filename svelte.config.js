@@ -24,10 +24,7 @@ const config = {
 			assets: 'docs',
 			fallback: '404.html' 
 		}),
-		prerender: {
-			crawl: true,
-			enabled: true
-	}
+		
 	},
 	vitePlugin: {
 		experimental: {
