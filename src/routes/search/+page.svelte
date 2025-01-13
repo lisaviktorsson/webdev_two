@@ -1,10 +1,71 @@
-<!-- For each searchable category, create navigatable button -->
-<div class="chat">
-  <h1>Press any of the following categories to display their items</h1>
-  <hr />
-  <ul>
-    {#each [["Users", "/users"], ["Address", "/addresses"], ["Banks", "/banks"], ["Appliances", "/appliances"], ["Beers", "/beers"], ["Blood Types", "/blood_types"], ["Credit Cards", "/credit_cards"]] as searchable}
-      <li><a href={"/search" + searchable[1]}>{searchable[0]}</a></li>
+<script>
+  import { goto } from '$app/navigation'; // For programmatic navigation
+  let search = '';
+  
+  let pokemons = [];
+  import { pokemons_store } from '$lib/pokemons';
+
+  import { onMount } from 'svelte';
+
+  onMount(async () => {
+    if ($pokemons_store.length > 2)
+      pokemons = JSON.parse($pokemons_store);
+  });
+
+</script>
+
+
+
+
+<footer class="flex" >
+    {#each pokemons as pokemon,i}
+      <a class="flex-1 btn" href="search/{pokemon.name}">{pokemon.name}</a>
     {/each}
-  </ul>
-</div>
+</footer>
+
+<form on:submit|preventDefault={()=> goto('/search/'+search)}>
+  <input type="text" placeholder="Sök upp en pokemon" bind:value={search} />
+  <button type="submit">Search</button>
+</form>
+
+<style>
+
+
+a{
+  background-color: rgba(0,0,0,0.4);
+}
+  input{
+    border-radius: 10px;
+    padding: 1em;
+    font-size: large;
+  }
+
+  footer{
+    display: flex;
+    justify-content: space-evenly;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100vw;
+    height: 5vh;
+    background-color: rgba(0,0,0,0.4);
+  }
+
+  footer a {
+    color:white;
+    transition: 100ms transform;
+  }
+
+
+  footer a:hover{
+    background-color: rgba(0,0,0,0.8);
+    transform: scale(1.1);
+
+  }
+
+ 
+
+
+</style>
+
+

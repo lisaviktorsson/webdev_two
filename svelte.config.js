@@ -5,6 +5,7 @@ import remarkGithub from 'remark-github';
 import remarkAbbr from 'remark-abbr';
 import rehypeSlug from 'rehype-slug';
 import rehypeAutolinkHeadings from 'rehype-autolink-headings';
+import { vitePreprocess } from '@sveltejs/kit/vite';
 
 
 
@@ -13,7 +14,7 @@ const config = {
 
 	// Consult https://github.com/sveltejs/svelte-preprocess
 	// for more information about preprocessors
-	preprocess: [preprocess(), mdsvex({
+	preprocess: [preprocess(), vitePreprocess(), mdsvex({
 		extensions: ['.md', '.svx'],
 		layout: { blog: './src/routes/blog/post.svelte' },
 	})],
@@ -22,9 +23,9 @@ const config = {
 		adapter: adapter({
 			pages: 'docs',
 			assets: 'docs',
+			fallback: '202.html'
 		})
 	},
-
 	vitePlugin: {
 		experimental: {
 			inspector: {

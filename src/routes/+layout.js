@@ -2,5 +2,6 @@
 /* https://kit.svelte.dev/docs/routing#layout */
 
 /* prerender = render the static HTML for the site and all subpages statically at build */
-export const prerender = true;
+
+export const prerender = true
 

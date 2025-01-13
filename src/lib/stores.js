@@ -20,6 +20,25 @@ if (browser) {
         story_id_store.subscribe((value) => {
                 /* on changes to the story_id_store, update the localStorage in the browser. */
                 window?.localStorage.setItem('story_id', value);
-                console.log(value)
         })
 }
+
+
+/* initialize the story_id to '1' if the story_id has not already been stored */
+const stringchat = browser ? window?.localStorage.getItem('chat') ?? "1" : "1"
+/* https://svelte.dev/tutorial/writable-stores */
+export const stringchat_store = writable(stringchat)
+
+if (browser) {
+        /* https://svelte.dev/tutorial/auto-subscriptions */
+        stringchat_store.subscribe((value) => {
+                /* on changes to the story_id_store, update the localStorage in the browser. */
+                window?.localStorage.setItem('chat', value);
+        })
+}
+
+
+
+
+
+
