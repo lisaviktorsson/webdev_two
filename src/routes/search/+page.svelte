@@ -27,10 +27,10 @@
     {/each}
 </footer>
 
-<form on:submit|preventDefault={()=> goto('/search/'+search)}>
+
   <input type="text" placeholder="Sök upp en pokemon" bind:value={search} />
-  <button type="submit">Search</button>
-</form>
+  <a href="{base}/search/{search}"><button  type="submit">Search</button></a>
+
 
 <style>
 
