@@ -11,7 +11,6 @@
 		"@skeletonlabs/skeleton": "^2.7.0",
 		"@skeletonlabs/tw-plugin": "^0.3.1",
 		"@sveltejs/adapter-auto": "^3.3.1",
-		"@sveltejs/adapter-node": "^5.2.11",
 		"@sveltejs/adapter-static": "^3.0.8",
 		"@sveltejs/kit": "^2.15.2",
 		"autoprefixer": "^10.4.14",
@@ -44,7 +43,6 @@
 		"firebase": "^10.11.0",
 		"highlight.js": "^11.9.0",
 		"prism-themes": "^1.9.0",
-		"remark": "^14.0.2",
-		"svelte-french-toast": "^1.0.3"
+		"remark": "^14.0.2"
 	}
 }
