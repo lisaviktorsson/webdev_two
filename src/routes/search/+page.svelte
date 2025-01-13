@@ -14,7 +14,8 @@
 
 
   import { base } from '$app/paths';
-  
+  console.log("base", base)
+
   
   </script>
 
