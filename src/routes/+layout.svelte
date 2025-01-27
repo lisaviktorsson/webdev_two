@@ -40,8 +40,9 @@ storePopup.set({ computePosition, autoUpdate, offset, shift, flip, arrow });
   let path;
 
   function handleNavigation(event, url) {
-    event.preventDefault(); // Prevent the default anchor behavior
+   //event.preventDefault(); // Prevent the default anchor behavior
     // Add any logic here, such as analytics or state cleanup
+    /*
     if (user){
       window.location.href = url; // Perform the navigation which causes a reload
     }
@@ -49,7 +50,7 @@ storePopup.set({ computePosition, autoUpdate, offset, shift, flip, arrow });
       console.log("no user")
       window.location.href = "/registrering";
       path = "/registrering"
-    }
+    }*/
   }
 
 
