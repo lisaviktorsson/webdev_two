@@ -31,7 +31,7 @@ storePopup.set({ computePosition, autoUpdate, offset, shift, flip, arrow });
 
   storeHighlightJs.set(hljs);
 
-  let logins = ["/password","/clickerlogin","/bounceLogin", "/painter","/dice","/photomatcher","/shop"];
+  let logins = ["/password","/clickerlogin","/bounceLogin", "/painter","/dice","/photomatcher","/shop","/snakelogin","/letterpop","/val-card","/ux-login"];
   
   import {currentUser_store} from "$lib/register";
   import { onMount } from "svelte";
@@ -90,7 +90,7 @@ storePopup.set({ computePosition, autoUpdate, offset, shift, flip, arrow });
 
 <nav class="bg-gray-600">
   {#each logins as l}
-    <a  class="text-gray-200 hover:bg-gray-400 hover:text-white rounded-md px-3 py-2 text-sm font-medium" href={base+'/'+l}>{l.charAt(1).toUpperCase()+l.slice(2)}</a>
+    <a  class="text-gray-200 hover:bg-gray-400 hover:text-white rounded-md px-3 py-2 text-sm font-medium" href="{base+l}">{l.charAt(1).toUpperCase()+l.slice(2)}</a>
   {/each}
   {#if user}
    <button class="text-gray-200 hover:bg-gray-400 hover:text-white rounded-md px-3 py-2 text-sm font-medium" on:click={()=>{$currentUser_store = " "; location.reload();}}>Logga ut</button>
