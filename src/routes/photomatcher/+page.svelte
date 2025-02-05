@@ -11,7 +11,7 @@
         }   
 }
 
-//shuffleArray(imgs)
+shuffleArray(imgs)
 imgs[8].white = true
 let index = 8;
 console.log(imgs)

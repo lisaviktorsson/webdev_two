@@ -90,7 +90,7 @@ storePopup.set({ computePosition, autoUpdate, offset, shift, flip, arrow });
 
 <nav class="bg-gray-600">
   {#each logins as l}
-    <a on:click={event => handleNavigation(event, l)}  class="text-gray-200 hover:bg-gray-400 hover:text-white rounded-md px-3 py-2 text-sm font-medium" href={l}>{l.charAt(1).toUpperCase()+l.slice(2)}</a>
+    <a  class="text-gray-200 hover:bg-gray-400 hover:text-white rounded-md px-3 py-2 text-sm font-medium" href={base+'/'+l}>{l.charAt(1).toUpperCase()+l.slice(2)}</a>
   {/each}
   {#if user}
    <button class="text-gray-200 hover:bg-gray-400 hover:text-white rounded-md px-3 py-2 text-sm font-medium" on:click={()=>{$currentUser_store = " "; location.reload();}}>Logga ut</button>
