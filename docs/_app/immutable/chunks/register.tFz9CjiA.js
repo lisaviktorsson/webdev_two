@@ -1,1 +1,0 @@
-import{w as r}from"./index.BuEqVMVQ.js";const s=(window==null?void 0:window.localStorage.getItem("users"))??"",t=r(s);t.subscribe(e=>{window==null||window.localStorage.setItem("users",e)});const o=(window==null?void 0:window.localStorage.getItem("currentUser"))??"",c=r(o);c.subscribe(e=>{window==null||window.localStorage.setItem("currentUser",e)});export{c,t as u};

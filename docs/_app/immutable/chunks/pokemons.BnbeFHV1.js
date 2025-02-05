@@ -1,0 +1,1 @@
+import{w as s}from"./index.B7U8qgMp.js";const e=(window==null?void 0:window.sessionStorage.getItem("pokemons"))??"",t=s(e);t.subscribe(o=>{window==null||window.sessionStorage.setItem("pokemons",o)});export{t as p};
